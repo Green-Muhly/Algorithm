@@ -26,7 +26,14 @@ rl.on("line", function (line) {
   rl.close();
 }).on("close", function () {
   const inputArr = input[0].split(" ").map(Number);
-  let answer = 0;
+  let answer = Array(inputArr.length).fill(1);
+  for (let i = 0; i < inputArr.length; i++) {
+    for (let j = 0; j < inputArr.length; j++) {
+      if (inputArr[j] > inputArr[i]) {
+        answer[i]++;
+      }
+    }
+  }
 
   console.log(answer);
   process.exit();
