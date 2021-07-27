@@ -1,12 +1,28 @@
 /*
-    회문문자열
-    앞에서 읽을 때나 뒤에서 읽을 때나 같은 문자열을 회문 문자열이라고 한다.
-    문자열이 입력되면 해당 문자열이 회문 문자열이며 'YES',  회문 문자열이 아니면 'NO'를 출력한다.
-    단 회문문자열은 대소문자를 구분하지 않는다.
+    문자열 압축
+    알파벳 대문자로 이루어진 문자열을 입력받아 같은 문자가 연속으로 반복되는 경우
+    반복되는 문자 바로 오른쪽에 반복 횟수를 표기하는 방법으로 문자열을 압축하는 프로그램을 작성하시오.
+    단, 반복횟수가 1인 경우 생략합니다.
 */
 
-const soulution = () => {
-    return "answer";
+const str = "KKHSSSSSSSE";
+
+const soulution = (str) => {
+  let count = 1;
+  let answer = "";
+  for (let i = 0; i < str.length; i++) {
+    if (i === 0) answer += str[i];
+    else {
+      if (str[i] === str[i - 1]) {
+        count++;
+      } else {
+        count === 1 ? null : (answer += count);
+        answer += str[i];
+        count = 1;
+      }
+    }
+  }
+  return answer;
 };
 
-console.log(soulution());
+console.log(soulution(str));
