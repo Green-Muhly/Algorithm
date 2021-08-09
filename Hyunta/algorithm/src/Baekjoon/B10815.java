@@ -3,7 +3,6 @@ package Baekjoon;
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-import java.util.stream.IntStream;
 
 public class B10815 {
     private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
