@@ -1,12 +1,19 @@
 /*
-    
+    Special Sort(구글 인터뷰)
+    N개의 정수가 입력되면 당신은 입력된 값을 정렬해야 한다.
+    음의 정수는 앞쪽에 양의 정수는 뒷쪽에 있어야 한다. 또한 양의 정수와 음의정수의 순서에는 변함이 없어야 한다.
 */
-const str = "";
+const arr = [-5, 1, 2, 3, -3, -2, 5, 6, -6];
 
-const soulution = (str) => {
-  let answer = "";
-
-  return answer;
+const soulution = (arr) => {
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > 0 && arr[j + 1] < 0) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+        }
+    }
+    return arr;
 };
 
-console.log(soulution(str));
+console.log(soulution(arr));
