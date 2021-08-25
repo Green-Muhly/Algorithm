@@ -6,14 +6,26 @@
 const arr = [11, 7, 5, 6, 10, 9];
 
 const soulution = (arr) => {
-  for (let i = 0; i < arr.length - 1; i++) {
-    let temp = i + 1;
-    for (j = i; j >= 0; j--) {
-      if (arr[temp] < arr[j]) {
-        [arr[temp], arr[j]] = [arr[j], arr[temp]];
-        temp = j;
-      }
+  // 내가 푼 방법
+  // for (let i = 0; i < arr.length - 1; i++) {
+  //   let temp = i + 1;
+  //   for (let j = i; j >= 0; j--) {
+  //     if (arr[temp] < arr[j]) {
+  //       [arr[temp], arr[j]] = [arr[j], arr[temp]];
+  //       temp = j;
+  //     }
+  //   }
+  // }
+
+  let j;
+  for (let i = 1; i < arr.length; i++) {
+    let tmp = arr[i];
+    for (j = i - 1; j >= 0; j--) {
+      if (arr[j] > tmp) {
+        arr[j + 1] = arr[j];
+      } else break;
     }
+    arr[j + 1] = tmp;
   }
 
   return arr;
