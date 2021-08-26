@@ -17,7 +17,6 @@ public class B1037mm {
 
         while (t-- > 0) {
             int n = Integer.parseInt(st.nextToken());
-            System.out.println("n = " + n);
             max = n > max ? n : max;
             min = n < min ? n : min;
         }
