@@ -27,6 +27,7 @@ const soulution = (arr) => {
       if (arr[i][j] === 1) {
         arr[i][j] = 0;
         queue.push([i, j]);
+        answer++;
         while (queue.length) {
           let [x, y] = queue.shift();
           for (let k = 0; k < 8; k++) {
@@ -38,7 +39,6 @@ const soulution = (arr) => {
             }
           }
         }
-        answer++;
       }
     }
   }
