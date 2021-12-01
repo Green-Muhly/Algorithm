@@ -8,11 +8,11 @@ function solution(s) {
         tmp = tmp.replace(/0/gi, "");
         let length2 = tmp.length;
         count += length - length2;
-        tmp = (length - length2).toString(2);
+        tmp = length2.toString(2);
         console.log(length, length2, tmp);
         count2++;
         if (tmp === "1") break;
     }
     console.log(count, count2);
-    return answer;
+    return [count2, count];
 }
