@@ -1,4 +1,4 @@
-// 11720 숫자의합 브론즈2
+// 8393 합 브론즈5
 
 const readline = require("readline");
 
