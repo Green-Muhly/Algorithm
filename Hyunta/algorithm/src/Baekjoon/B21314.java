@@ -24,7 +24,10 @@ public class B21314 {
 				m++;
 			} else if (target.charAt(i) == 'K') {
 				if (m > 0) {
-					value += Long.valueOf((int)Math.pow(10, m) * 5);
+					value += "5";
+					for (int j = 0; j < m; j++) {
+						value += "0";
+					}
 				} else {
 					value += "5";
 				}
@@ -45,7 +48,11 @@ public class B21314 {
 				m++;
 			} else if (target.charAt(i) == 'K') {
 				if (m > 0) {
-					value += Long.valueOf((int)Math.pow(10, m) + 5);
+					value += "1";
+					for (int j = 0; j < m-1; j++) {
+						value += "0";
+					}
+					value += "5";
 				} else {
 					value += "5";
 				}
@@ -53,7 +60,10 @@ public class B21314 {
 			}
 		}
 		if (m > 0) {
-			value += Long.valueOf((int)Math.pow(10, m - 1));
+			value += "1";
+			for (int i = 0; i < m - 1; i++) {
+				value += "0";
+			}
 		}
 		return value;
 	}
