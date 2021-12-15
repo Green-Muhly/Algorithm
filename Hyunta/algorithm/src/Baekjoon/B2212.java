@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class B2212 {
+	public static final int MIN = 0;
 	static int sensorCount;
 	static int centerCount;
 	static List<Integer> sensorLocation = new ArrayList<>();
@@ -29,8 +30,8 @@ public class B2212 {
 
 	private static int getLeastDistance() {
 		List<Integer> distance = new ArrayList<>();
-		if (centerCount >= sensorCount) {
-			return 0;
+		if (centerEnough()) {
+			return MIN;
 		}
 		for (int i = 1; i < sensorLocation.size(); i++) {
 			int tempDistance = sensorLocation.get(i) - sensorLocation.get(i - 1);
@@ -41,5 +42,9 @@ public class B2212 {
 			distance.remove(distance.size() - 1);
 		}
 		return distance.stream().mapToInt(i -> i).sum();
+	}
+
+	private static boolean centerEnough() {
+		return centerCount >= sensorCount;
 	}
 }
