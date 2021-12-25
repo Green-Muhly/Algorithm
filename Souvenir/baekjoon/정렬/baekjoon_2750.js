@@ -17,5 +17,8 @@ rl.on("line", function (line) {
 }).on("close", function () {
   input.shift();
   const sorted = input.sort((a, b) => a - b);
-  console.log(sorted);
+
+  sorted.forEach((element) => {
+    console.log(element);
+  });
 });
