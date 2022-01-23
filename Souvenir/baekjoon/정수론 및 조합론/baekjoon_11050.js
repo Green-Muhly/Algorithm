@@ -1,4 +1,4 @@
-// 이항계스
+// 이항계수
 
 const readline = require("readline");
 
