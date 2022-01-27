@@ -30,5 +30,5 @@
 | 2022-01-24 | 백준     | Python       | Four Squares    | 17626 |
 | 2022-01-25 | LeetCode | Python       | Reverse Integer |       |
 | 2022-01-26 | 백준     | Python       | 엄청난 부자2    | 1271  |
-|            |          |              |                 |       |
+| 2022-01-27 | 백준     | Python       | 저항            | 1076  |
 
